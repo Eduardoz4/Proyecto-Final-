@@ -1,0 +1,232 @@
+// Proyecto final 
+// Morales Salinas Eduardo 
+// Calculadora y transformador de unidades 
+// Librerias 
+#include<stdio.h>
+#include<math.h>
+int main (){
+	int op, ac, c, n, p;
+    float can, mat,nr,suma;
+	p=1;
+	while (p==1){
+	printf("Proyecto final: \n \n");
+	printf("Morales Salinas Eduardo \n \n");
+	printf(" \n \n ");
+	printf("Bienvenido ingeniero , por favor selecciona alguna de las opciones disponibles \n \n \n");
+	printf("Calculadora=1\n \n \n");
+	printf("Transformador de unidades=0\n \n \n");
+	scanf("%d", &op);
+	if (op==1){
+		printf("Has elegido la opcion de calculadora ¿Que desea hacer ingeniero? c: \n \n");
+		printf("1 suma \n");
+		printf("2 Resta \n");
+		printf("3 Multiplicacion \n");
+		printf("4 Potencias o raices \n");
+		printf("5 Promedios \n");
+		printf("6 Porcentajes\n");
+		scanf("%d",&ac);
+	switch(ac){
+		case 1: 
+			c=1;
+			printf("¿Cuantas cantidades deseas sumar?\n\n");
+			scanf("%d",&n);
+			while(c<=n){
+				printf("Por favor ingresa la cantidad a sumar\n\n");
+				scanf("%f",&can);
+				mat=mat+can;
+				c=c+1;	
+			}
+			   printf("Genial el resultado de tu suma es de %f \n\n",mat);
+			   printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+			   scanf("%d", &p);
+			   break;
+	    case 2:
+	    	printf("Ingresa la primera cantidad de la resta \n");
+	    	scanf("%f",&can);
+	    	printf("¿Cuanto le quieres restar a %f \n ",can);
+	    	scanf("%f", &nr);
+	    	mat=can-nr;
+	    	printf("El resultado de tu resta es de %f\n",mat);
+	    	printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+			   scanf("%d", &p);
+			   break;
+		case 3:
+			can=0;
+			mat=0;
+			printf("por favor ingresa la primera cifra de la multiplicacion\n");
+			scanf("%f",&nr);
+			printf("Por cuanro deseas multiplicar %f \n",nr);
+			scanf("%f",&can);
+			mat=nr*can;
+			printf("El resultado de tu multiplicacion es de %f \n",mat);
+	    	printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+			   scanf("%d", &p);
+			   break;
+        case 4:
+		   printf("Ingresa el numero que deseas elevar a la potencia \n");
+		   scanf("%f",&nr);
+		   printf("Ingresa la potencia :v\n");
+		   scanf("%f", &can);
+		   mat= pow (nr,can);
+		   printf("Tu resultado es %f\n",mat);
+		   printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+			   scanf("%d", &p);
+			   break;
+		case 5:
+		   c=1;
+		   printf("Elegiste la opcion promedio , ¿cuantas cantidades deseas promediar?\n");
+		   scanf("%d", &n);
+		   while(c<=n){
+		    	printf("Ingrese la cantidad a promediar\n");
+		    	scanf("%f", &can);
+                suma=suma+can;
+                mat= suma/n;
+                 c=c+1;
+                      }
+            printf("El pronedio es de %f \n", mat);
+            printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+			   scanf("%d", &p);
+			   break;
+        case 6: 
+            printf("Has elegido la opcion porcentajes \n");
+            printf("Ingresa la cantidad a la que le quieres sacar porcentaje \n");
+            scanf("%f", &nr);
+            printf("Ingresa el tanto porciento que le desas calcular a tu cantidad \n \n ");
+            scanf("%f", &can);
+            mat=can*nr/100;
+            printf("El %f porciento de %f es: \n \n",can,nr);
+            printf("%f \n ", mat);
+            printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n \n");
+			scanf("%d", &p);
+			break; 
+		   }		
+	}
+	if (op==0){
+		printf("Bienvenido al transformador de unidades ingeniero por favor seleccione una de las opciones disponibles \n");
+		printf("1- Metros a Centimetros \n");
+		printf("2- Pulgadas a Metros \n");
+		printf("3- Metros a Pies  \n");
+		printf("4- Kilogramos a Gramos \n");
+		printf("5- Gramos a Kilogramos \n");
+		printf("6- Litros a Mililitros \n ");
+		printf("7- celsius a Kelvin \n");
+		printf("8- Fahrenheit a Celsius \n");
+		printf("9- Fahrenheit a Kelvin \n");
+		printf("10- Minutos a segundos \n");
+		printf("11- Horas a minutos \n");
+		printf("12- Segundos a Horas \n");
+		scanf("%d", &ac);
+		switch(ac){
+			case 1:
+				printf("Ingresa la cantidad en metros que quieres tranformar a centimetros \n");
+				scanf("%f",&can);
+				mat=can*100;
+				printf("%f metros es igua a %f centimetros  \n",can,mat);
+				printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+			    scanf("%d", &p);
+		    	break; 
+		    case 2:
+		    	printf("Ingrese la cantidad de pulgadas que desea convertir a metros \n");
+		    	scanf("%f",&can);
+		    	mat=can/39.37;
+		    	printf("%f pulgadas a metros es igual a %f \n",can,mat);
+		    	printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+			    scanf("%d", &p);
+		    	break;
+		    	
+		    case 3:
+		    	printf("Ingresa la cantidad de metros que quieres transformar a pies \n");
+		    	scanf("%f", &can);
+		    	mat=can*3.281;
+		    	printf("%f metros son %f pies \n ",can,mat);
+		    	printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+			    scanf("%d", &p);
+		    	break;
+	       
+	        case 4: 
+	           printf("Ingresa la cantidad de kilogramos que deseas transformar a gramos \n");
+	           scanf("%f",&can);
+	           mat=can*1000;
+	           printf(" %f en kilogramos da un total de %f en gramos  \n",can,mat);
+	       	   printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+		       scanf("%d", &p);
+		   	break;
+		   	
+		   	case 5:
+		   		printf("Ingresa los gramos que quieres transformar a kilogramos \n");
+		   		scanf("%f", &can);
+		   		mat=can/1000;
+		   		printf("%f gramos es igual a %f kilogramos \n",can,mat);
+		   		printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+		        scanf("%d", &p);
+		   		break;
+		   	
+		   	case 6:
+		   		printf("Ingresa la cantidad de litros que quieres transformar a mililitros \n");
+		   		scanf("%f", &can);
+		   		mat=can*1000;
+		   		printf("%f en litros es igual a %f en mililitros \n", can,mat);
+		   		printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n\n");
+		        scanf("%d", &p);
+		   		break;
+		   		
+		   	case 7:
+		   		
+		   		printf("¿Cuantos grados celsius quieres transformar a grados Kelvin \n?");
+		   		scanf("%f",&can);
+		   		mat=can+273.15;
+		   		printf("%f grados celsius da un total de %f grados kelvin \n",can,mat);
+		   		printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+		        scanf("%d", &p);
+		   		break;
+		   		
+		   	case 8:
+		   		printf("¿Cuantos grados fahrenheit quieres transformar a Celsius ? \n");
+		   		scanf("%f", &can);
+		   		mat=can-32*5/9;
+		   		printf("%f en grados fahrenheit da un total de %f grados celsius \n",can,mat);
+		   		printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+		        scanf("%d", &p);
+		   		break;
+		   		
+		   	case 9:
+		   		printf("¿Cuantos grados Fahrenheit quieres transformar a kelvin? \n");
+		   		scanf("%f",&can);
+		   		mat=can-32*5/9+273.15;
+		   		printf("%f grados Fahrenheit son en total %f grados Kelvin \n \n " ,can,mat);
+		   		printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+		        scanf("%d", &p);
+		   		break;
+		   	
+		   	case 10:
+		   		printf("¿Cuantos minutos quieres transformar a segundos? \n \n \n");
+		   		scanf("%f", &can);
+		   		mat=can*60;
+		   		printf("%f minutos son un total de %f segundos \n \n ",can,mat);
+		   		printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+		        scanf("%d", &p);
+		   		break;
+		   		
+		   	case 11:
+		   		printf("¿cuantas horas deseas transformar a minutos? \n \n ");
+		   		scanf("%f",&can);
+		   		mat=can*60;
+		   		printf("%f horas son %f minutos \n \n",can,mat);
+		   		printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+		        scanf("%d", &p);
+		   		break;
+		   	case 12:
+		   		printf("¿Cuantos segundos deseas transformar a horas? \n \n");
+		   		scanf("%f",&can);
+		   		mat=can/3600;
+		   		printf("%f segundos da un total de %f horas \n \n",can,mat);
+		   		printf("Si desea regresar al menu oprima 1 si desea salir oprima 0 \n\n");
+		        scanf("%d", &p);
+		   		break;			
+  }
+		
+	}
+}
+printf("Gracias por usar la calculadora y el transformador de unidades espero haberte   ayudado vuelve pronto  c:\n \n ");
+
+}
